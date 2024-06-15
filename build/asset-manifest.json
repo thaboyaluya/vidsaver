@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f029a054.css",
+    "main.js": "/static/js/main.74f9a9aa.js",
+    "static/js/657.d4e98985.chunk.js": "/static/js/657.d4e98985.chunk.js",
+    "static/js/493.e5be8f72.chunk.js": "/static/js/493.e5be8f72.chunk.js",
+    "static/js/617.9f030e40.chunk.js": "/static/js/617.9f030e40.chunk.js",
+    "static/js/394.ae12d95d.chunk.js": "/static/js/394.ae12d95d.chunk.js",
+    "static/js/202.c3651159.chunk.js": "/static/js/202.c3651159.chunk.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/js/154.cc439677.chunk.js": "/static/js/154.cc439677.chunk.js",
+    "static/media/tiktok1.PNG": "/static/media/tiktok1.0951fa2088a21f281b36.PNG",
+    "static/media/facebook1.PNG": "/static/media/facebook1.3a54430701c00772e612.PNG",
+    "static/media/tiktok2.PNG": "/static/media/tiktok2.1b21acdab338aef23105.PNG",
+    "static/media/instagram1.PNG": "/static/media/instagram1.30b2bec3452315a78c4a.PNG",
+    "static/media/IMG_0958.PNG": "/static/media/IMG_0958.5b3f9c7408487b75739d.PNG",
+    "static/media/IMG_0963.jpg": "/static/media/IMG_0963.a33b12864b41c7d08478.jpg",
+    "static/media/IMG_0962.jpg": "/static/media/IMG_0962.c0e544b060a2f09a5564.jpg",
+    "static/media/facebook2.PNG": "/static/media/facebook2.3f835d6095faab156e00.PNG",
+    "static/media/facebookURL.png": "/static/media/facebookURL.aa0feb9d65c13be6f309.png",
+    "static/media/tiktokURL.png": "/static/media/tiktokURL.32dbcde30cdd2e200027.png",
+    "static/media/youtube2.png": "/static/media/youtube2.dad5f1e4f3df34f4e8c4.png",
+    "static/media/instagramURL.png": "/static/media/instagramURL.25968e005dccab5b2951.png",
+    "static/media/download.JPG": "/static/media/download.a4aa39cd35a9868c65c1.JPG",
+    "static/media/links.png": "/static/media/links.b0badf6a3f06a42c5407.png",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.f029a054.css.map": "/static/css/main.f029a054.css.map",
+    "main.74f9a9aa.js.map": "/static/js/main.74f9a9aa.js.map",
+    "657.d4e98985.chunk.js.map": "/static/js/657.d4e98985.chunk.js.map",
+    "493.e5be8f72.chunk.js.map": "/static/js/493.e5be8f72.chunk.js.map",
+    "617.9f030e40.chunk.js.map": "/static/js/617.9f030e40.chunk.js.map",
+    "394.ae12d95d.chunk.js.map": "/static/js/394.ae12d95d.chunk.js.map",
+    "202.c3651159.chunk.js.map": "/static/js/202.c3651159.chunk.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map",
+    "154.cc439677.chunk.js.map": "/static/js/154.cc439677.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f029a054.css",
+    "static/js/main.74f9a9aa.js"
+  ]
+}

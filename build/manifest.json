@@ -1,0 +1,73 @@
+{
+  "short_name": "VidSaver",
+  "name": "VidSaver",
+  "orientation": "any",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "maskable_icon_x512 2.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": " maskable"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "productivity",
+    "social",
+    "utilities"
+  ],
+  "display": "standalone",
+  "theme_color": "#4FD675",
+  "background_color": "#4FD675",
+  "screenshots": [
+    {
+      "src": "Screenshot (12).png",
+      "type": "image/png",
+      "sizes": "1024x495",
+      "form_factor": "wide"
+    },
+    {
+      "src": "Screenshot (4).png",
+      "type": "image/png",
+      "sizes": "1024x495",
+      "form_factor": "wide"
+    },
+    {
+      "src": "Screenshot (5).png",
+      "type": "image/png",
+      "sizes": "1024x495",
+      "form_factor": "wide"
+    },
+    {
+      "src": "Screenshot (16).png",
+      "type": "image/png",
+      "sizes": "322x546",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "Screenshot (17).png",
+      "type": "image/png",
+      "sizes": "322x546",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "Screenshot (18).png",
+      "type": "image/png",
+      "sizes": "322x546",
+      "form_factor": "narrow"
+    }
+  ],
+  "description": "Convert YouTube,Instagram,Tiktok and Facebook videos to MP4 quickly with our easy-to-use online converter. No registration required, just paste the link and download your video.It's really that simple.",
+  "lang": "en"
+}
