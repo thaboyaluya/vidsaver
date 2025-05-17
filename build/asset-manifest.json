@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.f029a054.css",
-    "main.js": "/static/js/main.74f9a9aa.js",
-    "static/js/657.d4e98985.chunk.js": "/static/js/657.d4e98985.chunk.js",
+    "main.js": "/static/js/main.97c7252d.js",
+    "static/js/657.6d5587b3.chunk.js": "/static/js/657.6d5587b3.chunk.js",
     "static/js/493.e5be8f72.chunk.js": "/static/js/493.e5be8f72.chunk.js",
-    "static/js/617.9f030e40.chunk.js": "/static/js/617.9f030e40.chunk.js",
-    "static/js/394.ae12d95d.chunk.js": "/static/js/394.ae12d95d.chunk.js",
-    "static/js/202.c3651159.chunk.js": "/static/js/202.c3651159.chunk.js",
+    "static/js/617.cddac734.chunk.js": "/static/js/617.cddac734.chunk.js",
+    "static/js/394.8728af4b.chunk.js": "/static/js/394.8728af4b.chunk.js",
+    "static/js/202.98d8e7ac.chunk.js": "/static/js/202.98d8e7ac.chunk.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/js/154.cc439677.chunk.js": "/static/js/154.cc439677.chunk.js",
     "static/media/tiktok1.PNG": "/static/media/tiktok1.0951fa2088a21f281b36.PNG",
@@ -26,17 +26,17 @@
     "service-worker.js": "/service-worker.js",
     "index.html": "/index.html",
     "main.f029a054.css.map": "/static/css/main.f029a054.css.map",
-    "main.74f9a9aa.js.map": "/static/js/main.74f9a9aa.js.map",
-    "657.d4e98985.chunk.js.map": "/static/js/657.d4e98985.chunk.js.map",
+    "main.97c7252d.js.map": "/static/js/main.97c7252d.js.map",
+    "657.6d5587b3.chunk.js.map": "/static/js/657.6d5587b3.chunk.js.map",
     "493.e5be8f72.chunk.js.map": "/static/js/493.e5be8f72.chunk.js.map",
-    "617.9f030e40.chunk.js.map": "/static/js/617.9f030e40.chunk.js.map",
-    "394.ae12d95d.chunk.js.map": "/static/js/394.ae12d95d.chunk.js.map",
-    "202.c3651159.chunk.js.map": "/static/js/202.c3651159.chunk.js.map",
+    "617.cddac734.chunk.js.map": "/static/js/617.cddac734.chunk.js.map",
+    "394.8728af4b.chunk.js.map": "/static/js/394.8728af4b.chunk.js.map",
+    "202.98d8e7ac.chunk.js.map": "/static/js/202.98d8e7ac.chunk.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map",
     "154.cc439677.chunk.js.map": "/static/js/154.cc439677.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f029a054.css",
-    "static/js/main.74f9a9aa.js"
+    "static/js/main.97c7252d.js"
   ]
 }
