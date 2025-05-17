@@ -19,6 +19,20 @@ const Header4 = ({ title }) => {
       setTheme("light")
     }
   }, [])
+
+
+     function validateFacebookUrl(urlToParse){
+                if (urlToParse) {
+                    var regExp = /^(https?:\/\/)?(www\.)?facebook.com\/[a-zA-Z0-9(\.\?)?]/;
+                    if (url.match(regExp)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+
+
   let rtext = ["Dividing zero by infinite", "Looking through a large set of data just be patient...", "Reticulating splines", "Swapping time and space", "We're testing your patience", "Just count to 10", "I swear it's almost done", "Making sure all the i's have dots...", "We are not liable for any broken screen as a result of waiting", "One mississippi,two mississippi...", "Do you like my loading animation? I made it myself", "Please wait while we serve other users", "Grabbing extra minions", "Still faster than Windows update", "Last call for the data bus! All aboard", "Bored of slow loading spinner,buy more RAM!", "Hold on tight", "We're almost there!", "Grab a snack,this might take a while", "Relax,we will take care of the rest..."]
   function generateRandomString(length) {
     let result = ''
@@ -37,6 +51,12 @@ const Header4 = ({ title }) => {
     if (url === '') {
       return toast.update(loading, { render: "💥 Search box can not be empty.Paste a link an try again", theme: theme, type: "error", isLoading: false, autoClose: 3000, closeButton: true, icon: false, hideProgressBar: false })
     }
+  if(!validateFacebookUrl(url)){
+        return toast.update(loading, { render: "💥 Invalid facebook url", type: "error", isLoading: false, theme: theme, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
+    }
+
+
+ 
     const options = {
       method: 'GET',
       url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/facebook',
@@ -110,10 +130,11 @@ const Header4 = ({ title }) => {
                             <i className="fa pr-2 fa-file-audio-o" aria-hidden="true"></i>
 
                             :
+                        
 
                             <i className="fa pr-2  fa-film" aria-hidden="true"></i>
 
-                        } {l.quality}</td>
+                      } {l.quality} {index === 2|| index === 3 ? <small>(File name is not available)</small> : ''}</td>
                         <td><Link download to={l.link}>
 
                           <i className="fa fa-2x  fa-download" aria-hidden="true"></i> </Link>

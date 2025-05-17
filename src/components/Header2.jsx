@@ -19,6 +19,16 @@ const Header2 = ({ title }) => {
     }
   }, [])
 
+
+        function validateInstagramUrl(urlToParse){
+                if (urlToParse) {
+                    var regExp = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+                    if (url.match(regExp)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
   let rtext = ["Dividing zero by infinite", "Looking through a large set of data just be patient...", "Reticulating splines...", "Swapping time and space...", "We're testing your patience", "Just count to 10", "I swear it's almost done", "Making sure all the i's have dots...", "We are not liable for any broken screen as a result of waiting", "One mississippi,two mississippi...", "Do you like my loading animation? I made it myself", "Please wait while we serve other users", "Grabbing extra minions", "Still faster than Windows update", "Bored of slow loading spinner,buy more RAM!", "Hold on tight", "We're almost there!", "Grab a snack,this might take a while...", "Relax,we will take care of the rest."]
 
   function generateRandomString(length) {
@@ -39,6 +49,10 @@ const Header2 = ({ title }) => {
     if (url === '') {
       return toast.update(loading, { render: "💥 Search box can not be empty.Paste a link an try again", theme: theme, type: "error", isLoading: false, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
     }
+       if(!validateInstagramUrl(url)){
+           return toast.update(loading, { render: "💥 Invalid instagram url", type: "error", isLoading: false, theme: theme, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
+       }
+
     const options = {
       method: 'GET',
       url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/instagram',
@@ -87,6 +101,7 @@ const Header2 = ({ title }) => {
             <div id='info' style={{ display: 'none' }}>
               <img src={video.picture ? video.picture : 'no video picture'} alt={video.title ? video.title : 'no video title'} />
               <h3>Title: {video.title ? video.title : 'no video title'} </h3>
+                     <h3>Followers: {video.author ? video.author.followers: 'no followers'} </h3>
               <h3><i className="fa fa-clock-o pr-1" aria-hidden="true"></i> Response time: {video.timeTaken ? video.timeTaken : 'no video timeTaken'} </h3>
               <table className="my-5 p-5 text-center table table-striped">
                 <thead>

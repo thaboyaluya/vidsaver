@@ -22,6 +22,8 @@ const Header = ({ title }) => {
     }
   }, [])
 
+
+
   function generateRandomString(length) {
     let result = ''
     const character = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
@@ -31,6 +33,17 @@ const Header = ({ title }) => {
     }
     return result
   }
+
+  function validateYouTubeUrl(urlToParse){
+                if (urlToParse) {
+                    var regExp = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/((watch\?v=|shorts\/|embed\/|v\/|@[\w.-]+\/video\/)?[-\w]{11})([&?][^\s]*)?$/
+                    if (url.match(regExp)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
 
 
   let rtext = ["Dividing zero by infinite", "Looking through a large set of data just be patient...", "Reticulating splines", "Swapping time and space", "We're testing your patience", "Just count to 10", "I swear it's almost done", "Making sure all the i's have dots...", "One mississippi,two mississippi...", "Do you like my loading animation? I made it myself", "Please wait while we serve other users", "Grabbing extra minions", "Still faster than Windows update", "Bored of slow loading spinner,buy more RAM!", "Hold on tight", "We're almost there!", "Grab a snack,this might take a while", "Relax,we will take care of the rest"]
@@ -42,7 +55,10 @@ const Header = ({ title }) => {
     if (url === '') {
       return toast.update(loading, { render: "💥 Search box can not be empty.Paste a link an try again", type: "error", isLoading: false, theme: theme, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
     }
-
+    if(!validateYouTubeUrl(url)){
+        return toast.update(loading, { render: "💥 Invalid youtube url", type: "error", isLoading: false, theme: theme, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
+    }
+ 
     const options = {
       method: 'GET',
       url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/youtube',
@@ -73,6 +89,7 @@ const Header = ({ title }) => {
 
 
 
+
   return (
     <div className="banner text-center">
       <div className="container">
@@ -89,8 +106,8 @@ const Header = ({ title }) => {
             <div id='info' style={{ display: 'none' }}>
               <img src={video.picture ? video.picture : 'no video picture'} alt={video.title ? video.title : 'no video title'} />
               <h3>Title: {video.title ? video.title : 'no video title'} </h3>
-              <h3><i className="fa fa-eye pr-1" aria-hidden="true"></i> Views  : {video.stats ? video.stats.views : 'no video views'} </h3>
-              <h3><i className="fa fa-upload pr-1" aria-hidden="true"></i>  Uploaded on : {video.stats ? video.stats.publishedText : 'no video published date'} </h3>
+              <h3><i className="fa fa-eye pr-1" aria-hidden="true"></i> Views  : {video.stats ? video.stats.viewCount : 'no video views'} </h3>
+              <h3><i className="fa fa-upload pr-1" aria-hidden="true"></i>  Uploaded on : {video.stats ? video.stats.publishDate : 'no video published date'} </h3>
               <h3><i className="fa fa-clock-o pr-1" aria-hidden="true"></i> Response time: {video.timeTaken ? video.timeTaken : 'no video timeTaken'} </h3>
               <table className="my-5 p-5 text-center table table-striped">
                 <thead>
@@ -114,6 +131,8 @@ const Header = ({ title }) => {
                         <td>
                           <Link download to={l.link}>
                             <i className="fa fa-2x fa-download" aria-hidden="true"></i> </Link>
+
+
                         </td>
                       </tr>
 
@@ -121,6 +140,7 @@ const Header = ({ title }) => {
                   }
                 </tbody>
               </table>
+
             </div>
           </div>
         </div>

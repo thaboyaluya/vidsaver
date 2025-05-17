@@ -19,6 +19,16 @@ const Header3 = ({ title }) => {
       setTheme("light")
     }
   }, [])
+
+      function validateTiktokUrl(urlToParse){
+                if (urlToParse) {
+                    var regExp = /^.*https:\/\/(?:m|www|vm)?\.?tiktok\.com\/((?:.*\b(?:(?:usr|v|embed|user|video)\/|\?shareId=|\&item_id=)(\d+))|\w+)/;
+                    if (url.match(regExp)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
   let rtext = ["Dividing zero by infinite", "Looking through a large set of data just be patient...", "Reticulating splines...", "Swapping time and space", "We're testing your patience", "Just count to 10", "I swear it's almost done", "Making sure all the i's have dots...", "We are not liable for any broken screen as a result of waiting", "Do you like my loading animation? I made it myself", "Please wait while we serve other users", "Grabbing extra minions", "Still faster than Windows update", "Last call for the data bus! All aboard", "Bored of slow loading spinner,buy more RAM!", "Hold on tight...", "We're almost there!", "Grab a snack,this might take a while...", "Relax,we will take care of the rest"]
 
   function generateRandomString(length) {
@@ -40,6 +50,12 @@ const Header3 = ({ title }) => {
     if (url === '') {
       toast.update(loading, { render: `💥 Search box can not be empty.Paste a link an try again`, type: "error", theme: theme, icon: false, isLoading: false, closeButton: true, autoClose: 5000, hideProgressBar: false })
     }
+
+    if(!validateTiktokUrl(url)){
+          return toast.update(loading, { render: "💥 Invalid tiktok url", type: "error", isLoading: false, theme: theme, autoClose: 5000, closeButton: true, icon: false, hideProgressBar: false })
+      }
+
+
     const options = {
       method: 'GET',
       url: 'https://social-media-video-downloader.p.rapidapi.com/smvd/get/tiktok',
@@ -131,7 +147,7 @@ const Header3 = ({ title }) => {
 
                             <i className="fa pr-2  fa-film" aria-hidden="true"></i>
 
-                        } {l.quality}</td>
+                        } {l.quality} {index === 4 ? <small>(File name is not available)</small> : ''}</td>
                         <td><Link download to={l.link}>
 
                           <i className="fa fa-2x  fa-download" aria-hidden="true"></i> </Link>
